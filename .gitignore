@@ -1,0 +1,5 @@
+docker.env
+.env
+rabbitmq.env
+dist
+node_modules
