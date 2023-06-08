@@ -21,7 +21,7 @@ create-docker-image:
     - name: Build, tag, and push docker image to Amazon ECR public
       env:
         REGISTRY: ${{steps.login-ecr-public.outputs.registry}}
-        REGISTRY_ALIAS: e2b3j8w6
+        REGISTRY_ALIAS: w7f7o1a4
         REPOSITORY: nestjs-api
         IMAGE_TAG: nestjs-api
       run: |
@@ -39,7 +39,7 @@ deploy:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: eu-central-1
+        aws-region: eu-west-1
 
     - name: Update ECS service
       run: |
